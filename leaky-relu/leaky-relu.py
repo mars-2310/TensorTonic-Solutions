@@ -1,0 +1,16 @@
+import numpy as np
+
+def leaky_relu(x: list | float, alpha: float = 0.01) -> np.ndarray:
+    """
+    Returns elementwise Leaky ReLU values as a NumPy array matching the input shape.
+    """
+    # Write code here
+    x = np.asarray(x, dtype=float)
+    res = []
+    for num in x:
+        if(num >= 0):
+            res.append(num)
+        else:
+            res.append(alpha*num)
+    return np.asarray(res)
+    pass
